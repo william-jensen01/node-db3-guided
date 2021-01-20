@@ -5,10 +5,10 @@ const User = require('./user-model.js');
 const router = express.Router();
 
 router.get('/:id/posts', (req, res) => {
-  User.getPosts()
+  User.getPosts(req.params.id)
     .then()
     .catch(err => {
-      
+      res.status(500).json({ error: err.message })
     })
 })
 
