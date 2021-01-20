@@ -9,6 +9,7 @@ module.exports = {
     // join users u
     //     on p.user_id = u.id
     // where u.id = 1;
-    return db('posts')
+    return db('posts as p')
+      .join('users as u')
   }
 }
