@@ -9,6 +9,6 @@ module.exports = {
     // join users u
     //     on p.user_id = u.id
     // where u.id = 1;
-    return Promise.resolve(['a', 'b'])
+    return db('posts')
   }
 }
