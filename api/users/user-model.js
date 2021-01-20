@@ -1,1 +1,4 @@
 // user-model
+module.exports = {
+  
+}

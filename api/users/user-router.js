@@ -6,7 +6,9 @@ const router = express.Router();
 
 router.get('/:id/posts', (req, res) => {
   User.getPosts(req.params.id)
-    .then()
+    .then(posts => {
+      res.json(posts)
+    })
     .catch(err => {
       res.status(500).json({ error: err.message })
     })
