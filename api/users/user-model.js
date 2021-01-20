@@ -12,6 +12,6 @@ module.exports = {
     return db('posts as p')
       .join('users as u', 'p.user_id', 'u.id')
       .select('p.id', 'contents', 'username')
-      .where({})
+      .where('u.id', '=', id)
   }
 }
