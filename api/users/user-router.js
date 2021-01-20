@@ -4,6 +4,10 @@ const db = require("../../data/db-config.js");
 
 const router = express.Router();
 
+router.get('/:id/posts', (req, res) => {
+  
+})
+
 router.get("/", (req, res) => {
   db("users")
     .then(users => {
