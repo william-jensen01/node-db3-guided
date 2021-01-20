@@ -11,5 +11,7 @@ module.exports = {
     // where u.id = 1;
     return db('posts as p')
       .join('users as u', 'p.user_id', 'u.id')
+      .select('p.id', 'contents', 'username')
+      .where({})
   }
 }
